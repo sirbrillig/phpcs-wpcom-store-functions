@@ -8,10 +8,10 @@
     #############################################################################
     -->
 
-    <file>./VariableAnalysis</file>
+    <file>./WpcomStoreFunctions</file>
     <file>./Tests</file>
 
-    <exclude-pattern>./Tests/VariableAnalysisSniff/fixtures/</exclude-pattern>
+    <exclude-pattern>./Tests/Sniffs/StoreFunction/fixtures/</exclude-pattern>
 
     <!-- Only check PHP files. -->
     <arg name="extensions" value="php"/>
@@ -34,8 +34,7 @@
     #############################################################################
     -->
 
-    <!-- Set minimum PHP version supported to PHP 5.4. -->
-    <config name="testVersion" value="5.4-"/>
+    <config name="testVersion" value="7.4-"/>
 
     <rule ref="PHPCSDev">
         <!-- This code base uses tab indentation instead of spaces. -->
