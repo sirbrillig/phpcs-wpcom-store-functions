@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <ruleset name="WpcomStoreFunctions">
-  <description>A phpcs sniff to prevent misuse of WPCOM Store functions.</description>
+     <description>A phpcs sniff to prevent misuse of WPCOM Store functions.</description>
 </ruleset>
