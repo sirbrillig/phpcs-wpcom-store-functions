@@ -8,10 +8,10 @@
     #############################################################################
     -->
 
-    <file>./VariableAnalysis</file>
+    <file>./WpcomStoreFunctions</file>
     <file>./Tests</file>
 
-    <exclude-pattern>./Tests/VariableAnalysisSniff/fixtures/</exclude-pattern>
+    <exclude-pattern>./Tests/Sniffs/StoreFunction/fixtures/</exclude-pattern>
 
     <!-- Only check PHP files. -->
     <arg name="extensions" value="php"/>
@@ -34,30 +34,7 @@
     #############################################################################
     -->
 
-    <!-- Set minimum PHP version supported to PHP 5.4. -->
-    <config name="testVersion" value="5.4-"/>
-
-    <rule ref="PHPCSDev">
-        <!-- This code base uses tab indentation instead of spaces. -->
-        <exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
-
-        <!-- Don't enforce lining up the assignment operators in assignment blocks. -->
-        <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
-
-        <!-- Don't enforce lining up the double arrows in array declarations.
-             Possibly enforce this later once the sniff has been replaced by a better, more configurable version. -->
-        <exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned"/>
-
-        <!-- Don't enforce documentation (yet). -->
-        <exclude name="Generic.Commenting.DocComment"/>
-        <exclude name="PEAR.Commenting.ClassComment"/>
-        <exclude name="PEAR.Commenting.FileComment"/>
-        <exclude name="PEAR.Commenting.InlineComment"/>
-
-        <!-- WIP: This is part of PSR12 and should probably be enforced,
-             but the codebase needs work before it can be enabled. -->
-        <exclude name="Generic.Files.LineLength.TooLong" />
-    </rule>
+    <config name="testVersion" value="7.4-"/>
 
     <rule ref="ImportDetection" />
     <rule ref="VariableAnalysis"/>
@@ -86,6 +63,11 @@
         <properties>
             <property name="spacingBeforeFirst" value="0"/>
         </properties>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.After"/>
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.AfterLast"/>
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.Before"/>
     </rule>
     <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
         <properties>
