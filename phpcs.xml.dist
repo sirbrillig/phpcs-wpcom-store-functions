@@ -64,6 +64,11 @@
             <property name="spacingBeforeFirst" value="0"/>
         </properties>
     </rule>
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.After"/>
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.AfterLast"/>
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.Before"/>
+    </rule>
     <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
         <properties>
             <property name="spacingBeforeFirst" value="0"/>
