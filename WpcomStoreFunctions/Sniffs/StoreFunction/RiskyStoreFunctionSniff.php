@@ -13,11 +13,13 @@ class RiskyStoreFunctionSniff implements Sniff
 	/**
 	 * An array of function names to disallow with a warning.
 	 *
-	 * @var string[]
+	 * @var array<string>
 	 */
 	private array $functionNamesToWarn = [
 		'get_subscription',
 	];
+
+	private string $defaultWarning = 'Calling a this function is resource heavy. It should not be used anywhere where performance is important.';
 
 	public function register()
 	{
@@ -43,6 +45,6 @@ class RiskyStoreFunctionSniff implements Sniff
 		if (Helpers::isNamespacedCall($phpcsFile, $stackPtr)) {
 			return;
 		}
-		$phpcsFile->addWarning('Calling a WPCOM Store function is risky.', $stackPtr, 'Found');
+		$phpcsFile->addWarning($this->defaultWarning, $stackPtr, 'Found');
 	}
 }
