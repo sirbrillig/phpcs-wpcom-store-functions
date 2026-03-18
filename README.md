@@ -1,6 +1,6 @@
 # WpcomStoreFunctions
 
-A [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) sniff to prevent misuse of WPCOM Store functions.
+A [phpcs](https://github.com/PHPCSStandards/PHP_CodeSniffer) sniff to prevent misuse of WPCOM Store functions.
 
 ## Installation
 
@@ -13,7 +13,7 @@ composer require --dev sirbrillig/phpcs-wpcom-store-functions
 
 ## Configuration
 
-When installing sniff standards in a project, you edit a `phpcs.xml` file with the `rule` tag inside the `ruleset` tag. The `ref` attribute of that tag should specify a standard, category, sniff, or error code to enable. It’s also possible to use these tags to disable or modify certain rules. The [official annotated file](https://href.li/?https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml) explains how to do this.
+When installing sniff standards in a project, you edit a `phpcs.xml` file with the `rule` tag inside the `ruleset` tag. The `ref` attribute of that tag should specify a standard, category, sniff, or error code to enable. It’s also possible to use these tags to disable or modify certain rules. The [official annotated file](https://href.li/?https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Annotated-Ruleset) explains how to do this.
 
 ```xml
 <?xml version="1.0"?>
